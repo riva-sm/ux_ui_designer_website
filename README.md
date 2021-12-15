@@ -7,4 +7,4 @@
 - Section page site in Modal.
 
 
-![ux-ui](/preview.JPG)
+![ux-ui](/preview.png)
