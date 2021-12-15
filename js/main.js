@@ -12,5 +12,9 @@ $(document).ready(function(){
         $(".whoAmi").removeClass("active");
         $(".contactMe").removeClass("active");
         $(".portfolio").removeClass("active");
-    })
+    });
+
+    $(".hover3d").hover3d({
+        selector: ".hover3d-child"
+    });
 })

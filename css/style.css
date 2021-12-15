@@ -74,6 +74,85 @@ img {
   transform-origin: 0 0;
   z-index: 1;
 }
+
+/* ======================= Modal  ======================= */
+.modal {
+  color: #333;
+}
+
+.modal_head {
+  background-color: #fc9842;
+  background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+  color: #fff;
+  padding: 1rem;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -60px;
+}
+
+.content-area img {
+  margin-bottom: 55px;
+  transition: all 0.5s ease-in-out;
+}
+.content-area img:hover {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.content-area h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.content-area p {
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.content-area ul li {
+  line-height: 22px;
+}
+
+.content-area .fa {
+  color: deepskyblue;
+  margin-right: 20px;
+}
+
+.modal-content {
+  padding: 30px;
+  margin-top: 84px;
+  position: relative;
+}
+.modal-content::before {
+  content: "";
+  background-image: url("../img/dots.png");
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.custom_modal {
+  width: 85%;
+  margin: auto;
+  box-shadow: 0 25px 70px 0 rgb(0 0 0 / 65%);
+}
+
+.closeModalBtn {
+  opacity: 1;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -70px;
+  font-size: 16px;
+}
+
 /* ======================= Header ======================= */
 .header {
   position: absolute;
@@ -683,80 +762,126 @@ img {
   opacity: 1;
   color: #f9b03e;
 }
-/* ======================= Blog in Modal  ======================= */
-#blogModal {
-  color: #333;
+/* ======================= Services in Modal ======================= */
+.item-service {
+  border: 2px solid #ebebeb;
+  padding: 45px 35px;
+  transition: 0.5s;
+  margin-bottom: 14px;
 }
 
-.modal_head {
-  background-color: #fc9842;
-  background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
-  color: #fff;
-  padding: 1rem;
-  letter-spacing: 2px;
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: -60px;
+.item-service i img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  transition: 0.8s linear;
+  transform: rotateY(0);
 }
-
-.content-area img {
-  margin-bottom: 55px;
-  transition: all 0.5s ease-in-out;
+.item-service:hover i img {
+  transform: rotateY(360deg);
 }
-.content-area img:hover {
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.content-area h3 {
-  font-size: 25px;
+.item-service h5 {
+  margin-top: 30px;
   margin-bottom: 20px;
+  font-size: 18px;
 }
-.content-area p {
-  font-size: 17px;
-  margin-bottom: 30px;
+/* ======================= Freelancer in Modal  ======================= */
+.img-wrapper {
+  overflow: hidden;
+}
+.img-wrapper img {
+  transition: transform 0.5s ease;
+}
+.img-wrapper img:hover {
+  transform: scale(1.5);
+  cursor: zoom-in;
 }
 
-.content-area ul li {
-  line-height: 22px;
+.row.no-gutters [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
 }
-
-.content-area .fa {
-  color: deepskyblue;
-  margin-right: 20px;
+/* ======================= Team  ======================= */
+.team .team-item {
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
-
-.modal-content {
-  padding: 30px;
-  margin-top: 84px;
+.team .team-item:hover .info {
+  bottom: 50px;
+}
+.team .team-item:hover .team-item-img::after {
+  opacity: 1;
+  visibility: visible;
+}
+.team .team-item .team-item-img {
+  overflow: hidden;
+  border-radius: 4px;
   position: relative;
 }
-.modal-content::before {
+.team .team-item .team-item-img::after {
   content: "";
-  background-image: url("../img/dots.png");
-  opacity: 0.2;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0.3));
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+.team .team-item .info {
+  position: absolute;
+  bottom: -500px;
+  left: 0;
+  padding: 0 15px;
   width: 100%;
-  height: 100%;
+  z-index: 4;
+  transition: all 0.4s;
+  color: #fff;
 }
-
-.custom_modal {
-  width: 85%;
-  margin: auto;
-  box-shadow: 0 25px 70px 0 rgb(0 0 0 / 65%);
-}
-
-.closeModalBtn {
-  opacity: 1;
-  background-color: #000 !important;
-  color: #fff !important;
-  border-radius: 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: -70px;
+.team .team-item .info h6 {
   font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.team .team-item .info span {
+  color: #ee3158;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.team .team-item .info p {
+  margin-bottom: 10px;
+  color: #a9a9a9;
+}
+.team .team-item .info .icon {
+  margin: 0 10px;
+  font-size: 12px;
+  color: #eee;
+}
+
+.team h2 {
+  margin-bottom: 30px;
+}
+.team h2 span.pink {
+  color: #ee3158;
+  font-weight: 700;
+}
+
+/* ======================= Locations  ======================= */
+.map .socialize i {
+  width: 50px;
+  height: 50px;
+  line-height: 47px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #333;
+  margin-top: 45px;
+  border: 2px solid #333;
+  margin-bottom: 20px;
+  margin-right: 5px;
 }
