@@ -1006,4 +1006,79 @@ img {
     width: 170px;
     height: 270px;
   }
+  .text-content h2 {
+    display: none;
+  }
+
+  .contactMe .form {
+    padding: 140px 70px;
+  }
+
+  .contactMe .form .w50 {
+    width: 100% !important;
+  }
+  .contactMe .form .top {
+    flex-wrap: wrap;
+  }
+
+  .top {
+    display: none;
+  }
+  .contactMe h2 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .contactMe .contact-info {
+    text-align: center;
+    width: 100%;
+  }
+  .contactMe .contact-info .phone {
+    font-size: 20px;
+  }
+  .modal_head {
+    width: 40%;
+  }
+  .modal-content {
+    padding: 20px;
+  }
+  .content-area img {
+    margin-bottom: 15px;
+  }
+  .closeModalBtn {
+    position: relative;
+    z-index: 4;
+  }
+}
+
+@media (max-width: 450px) {
+  .contactMe .form {
+    padding: 120px 45px;
+    padding-left: 15px;
+  }
+  .contactMe .form input[type="text"] {
+    margin-bottom: 20px;
+  }
+  .contactMe .form textarea {
+    margin-bottom: 20px;
+  }
+  .contactMe .back-to-main {
+    left: 101%;
+  }
+  .contactMe .contact-info .phone {
+    padding-top: 0;
+  }
+  .modal-content {
+    padding: 10px;
+  }
+  .content-area h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .content-area p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 }
